@@ -9,15 +9,18 @@
         1.  Windows 7 64 bit (assume OS installed in C:\Windows)
         2.  Eclipse 4.4
         3.  JDK 8.0
-        4.  zwamp-1.1.2 (mysql)   //to do: launch it wih antrun-maven-plugin
+        4.  sql server 2012   //not portable
        
         Approach1 - all automate
         1.  "mvn install". This will include 
         2.  this project includes integration test 
         3.  with maven-failsafe-plugin, any java file name with "IT" will be treated as 
             intergration test (by maven, the phase is integration-test). 
-        4)  the integration test report can be found in \target\failsafe-reports
+        4.  the integration test report can be found in \target\failsafe-reports
        
+        remark:
+        1.  official jdbc driver from Microsoft is not open-sourced, so it's not available in mvn
+        2.  
     -->
         
     <properties>
